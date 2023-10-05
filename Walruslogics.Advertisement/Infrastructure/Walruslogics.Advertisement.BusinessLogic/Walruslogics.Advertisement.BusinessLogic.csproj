@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ApplicationCore\Walruslogics.Advertisement.Database\Walruslogics.Advertisement.Database.csproj" />
+    <ProjectReference Include="..\..\ApplicationCore\Walruslogics.Advertisement.Repository\Walruslogics.Advertisement.Repository.csproj" />
+    <ProjectReference Include="..\..\Framework\Walruslogics.Framework.IdentityProvider\Walruslogics.Framework.IdentityProvider.csproj" />
+    <ProjectReference Include="..\Walruslogics.Advertisement.DTOs\Walruslogics.Advertisement.DTOs.csproj" />
+  </ItemGroup>
+
+</Project>

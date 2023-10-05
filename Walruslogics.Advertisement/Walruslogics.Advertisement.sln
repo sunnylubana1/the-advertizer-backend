@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{AD335443-522C-46A2-934F-5B13777DD30B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationCore", "ApplicationCore", "{14BBF91A-74F1-46E4-A95E-5B8A7BE9F101}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{12FB0E61-979E-4941-A50E-FF0072F10B92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6D6F761E-E381-4B50-A686-8EE170BDED0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walruslogics.Advertisement.Database", "ApplicationCore\Walruslogics.Advertisement.Database\Walruslogics.Advertisement.Database.csproj", "{C87DC2C4-0AE8-41AE-8648-43328240B6D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walruslogics.Advertisement.Repository", "ApplicationCore\Walruslogics.Advertisement.Repository\Walruslogics.Advertisement.Repository.csproj", "{4514C5E2-F7A8-4525-8C30-EA3659BD5799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walruslogics.Advertisement.Framework", "Framework\Walruslogics.Advertisement.Framework\Walruslogics.Advertisement.Framework.csproj", "{5FDC7061-490A-404F-B1CB-C68A27B6B569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walruslogics.Advertisement.BusinessLogic", "Infrastructure\Walruslogics.Advertisement.BusinessLogic\Walruslogics.Advertisement.BusinessLogic.csproj", "{618D1A66-99A0-42CD-B641-DA2FAD3EE6EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walruslogics.Advertisement.DTOs", "Infrastructure\Walruslogics.Advertisement.DTOs\Walruslogics.Advertisement.DTOs.csproj", "{9E66AB31-BEDD-427D-B8CE-8903A02AD9F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walruslogics.Advertisement.WebAPI", "Services\Walruslogics.Advertisement.WebAPI\Walruslogics.Advertisement.WebAPI.csproj", "{299CB27F-8F09-4553-8A80-60F203B92229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walruslogics.Framework.IdentityProvider", "Framework\Walruslogics.Framework.IdentityProvider\Walruslogics.Framework.IdentityProvider.csproj", "{17B6C641-D093-4A4B-AA64-F284657C1715}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C87DC2C4-0AE8-41AE-8648-43328240B6D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C87DC2C4-0AE8-41AE-8648-43328240B6D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C87DC2C4-0AE8-41AE-8648-43328240B6D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C87DC2C4-0AE8-41AE-8648-43328240B6D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4514C5E2-F7A8-4525-8C30-EA3659BD5799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4514C5E2-F7A8-4525-8C30-EA3659BD5799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4514C5E2-F7A8-4525-8C30-EA3659BD5799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4514C5E2-F7A8-4525-8C30-EA3659BD5799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDC7061-490A-404F-B1CB-C68A27B6B569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDC7061-490A-404F-B1CB-C68A27B6B569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDC7061-490A-404F-B1CB-C68A27B6B569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDC7061-490A-404F-B1CB-C68A27B6B569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618D1A66-99A0-42CD-B641-DA2FAD3EE6EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618D1A66-99A0-42CD-B641-DA2FAD3EE6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618D1A66-99A0-42CD-B641-DA2FAD3EE6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618D1A66-99A0-42CD-B641-DA2FAD3EE6EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E66AB31-BEDD-427D-B8CE-8903A02AD9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E66AB31-BEDD-427D-B8CE-8903A02AD9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E66AB31-BEDD-427D-B8CE-8903A02AD9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E66AB31-BEDD-427D-B8CE-8903A02AD9F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{299CB27F-8F09-4553-8A80-60F203B92229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{299CB27F-8F09-4553-8A80-60F203B92229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{299CB27F-8F09-4553-8A80-60F203B92229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{299CB27F-8F09-4553-8A80-60F203B92229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B6C641-D093-4A4B-AA64-F284657C1715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B6C641-D093-4A4B-AA64-F284657C1715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B6C641-D093-4A4B-AA64-F284657C1715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B6C641-D093-4A4B-AA64-F284657C1715}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C87DC2C4-0AE8-41AE-8648-43328240B6D8} = {14BBF91A-74F1-46E4-A95E-5B8A7BE9F101}
+		{4514C5E2-F7A8-4525-8C30-EA3659BD5799} = {14BBF91A-74F1-46E4-A95E-5B8A7BE9F101}
+		{5FDC7061-490A-404F-B1CB-C68A27B6B569} = {12FB0E61-979E-4941-A50E-FF0072F10B92}
+		{618D1A66-99A0-42CD-B641-DA2FAD3EE6EB} = {6D6F761E-E381-4B50-A686-8EE170BDED0E}
+		{9E66AB31-BEDD-427D-B8CE-8903A02AD9F2} = {6D6F761E-E381-4B50-A686-8EE170BDED0E}
+		{299CB27F-8F09-4553-8A80-60F203B92229} = {AD335443-522C-46A2-934F-5B13777DD30B}
+		{17B6C641-D093-4A4B-AA64-F284657C1715} = {12FB0E61-979E-4941-A50E-FF0072F10B92}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6589C119-C3B6-4804-AD34-E6D18627B30A}
+	EndGlobalSection
+EndGlobal
