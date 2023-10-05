@@ -66,7 +66,7 @@ namespace Walruslogics.Advertisement.Framework
     {
       using (MailMessage mail = new MailMessage())
       {
-        mail.From = new MailAddress("scrub@whitelistdata.com");
+        mail.From = new MailAddress("majinder@gmail.com");
         mail.To.Add(email);
         mail.Subject = subject;
         mail.Body = body;
@@ -94,7 +94,7 @@ namespace Walruslogics.Advertisement.Framework
         using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
         {
           smtp.UseDefaultCredentials = false;
-          smtp.Credentials = new NetworkCredential("scrub@whitelistdata.com", "nrusrafrbaqweyjc");
+          smtp.Credentials = new NetworkCredential("", "");
           smtp.EnableSsl = true;
           smtp.Send(mail);
         }
