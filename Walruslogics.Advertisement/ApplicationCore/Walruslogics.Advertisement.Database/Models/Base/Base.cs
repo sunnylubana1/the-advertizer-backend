@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Walruslogics.Advertisement.Database.Models.Base
+namespace Walruslogics.Advertisement.Database.Models
 {
     public class Base
     {

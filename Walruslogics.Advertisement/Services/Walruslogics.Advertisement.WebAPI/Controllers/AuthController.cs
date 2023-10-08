@@ -120,6 +120,30 @@ namespace Walruslogics.Advertisement.WebAPI
       return Ok(responseObject);
     }
 
+    [HttpGet("isemailalreadyexists")]
+    public async Task<IActionResult> EmailExists(string email)
+    {
+      bool responseObject = false;
+
+      if (ModelState.IsValid)
+      {
+        // Step 1.  Check if User Already exists 
+        var appuser = await _userManager.FindByNameAsync(email);
+
+        if (appuser == null)
+        {
+          responseObject = false;
+
+        }
+        else
+        {
+          responseObject = true;
+        }
+      }
+
+      return Ok(responseObject);
+    }
+
     [HttpPost("logout")]
     public async Task<IActionResult> Logout(string returnUrl = null)
     {

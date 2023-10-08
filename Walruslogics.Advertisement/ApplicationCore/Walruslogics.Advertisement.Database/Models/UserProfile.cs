@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Walruslogics.Advertisement.Database.Models
 {
   [Table("UserProfile")]
-  public class UserProfile : Base.Base
+  public class UserProfile : Base
   {
     [MaxLength(20)]
     public string FirstName { get; set; }
@@ -37,6 +37,8 @@ namespace Walruslogics.Advertisement.Database.Models
 
     [MaxLength(500)]
     public string? ImagePath { get; set; }
+    [MaxLength(50)]
+    public string? ImageName { get; set; }
 
     public DateTime? LastPasswordChangeDate { get; set; }
     public string? PassowrdResetToken { get; set; }

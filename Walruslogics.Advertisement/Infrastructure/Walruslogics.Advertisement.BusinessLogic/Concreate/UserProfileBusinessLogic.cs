@@ -56,26 +56,69 @@ namespace Walruslogics.Advertisement.BusinessLogic
         isAdd = true;
       }
 
-      var state = _cityRepository.GetById(Convert.ToInt64(userProfileDTO.CityId));
-
-      userProfile.StateId = _cityRepository.GetById(Convert.ToInt64(userProfileDTO.CityId)).StateId;
       userProfile.Id = Convert.ToInt64(userProfileDTO.Id);
       userProfile.FirstName = userProfileDTO.FirstName;
       userProfile.LastName = userProfileDTO.LastName;
-      userProfile.PhoneNumber = userProfileDTO.PhoneNumber;
-      userProfile.Address = userProfileDTO.Address;
-      userProfile.Address2 = userProfileDTO.Address2.Trim() == "undefined" ? null : userProfileDTO.Address2;
+
+      if (userProfileDTO.CityId != null && Convert.ToInt64(userProfileDTO.CityId) > 0)
+      {
+        userProfile.StateId = _cityRepository.GetById(Convert.ToInt64(userProfileDTO.CityId)).StateId;
+        userProfile.CityId = Convert.ToInt64(userProfileDTO.CityId);
+      }
+
+      if(userProfileDTO.Address != "null" && userProfileDTO.Address != null)
+      {
+        userProfile.Address = userProfileDTO.Address;
+      }
+      else
+      {
+        userProfile.Address = null;
+      }
+
+      if (userProfileDTO.Address2 != "null" && userProfileDTO.Address2 != null)
+      {
+        userProfile.Address2 = userProfileDTO.Address2;
+      }
+      else
+      {
+        userProfile.Address2 = null;
+      }
+
+      if (userProfileDTO.PhoneNumber != "null" && userProfileDTO.PhoneNumber != null)
+      {
+        userProfile.PhoneNumber = userProfileDTO.PhoneNumber;
+      }
+      else
+      {
+        userProfile.PhoneNumber = null;
+      }
+      if (userProfileDTO.PinCode != "null" && userProfileDTO.PinCode != null)
+      {
+        userProfile.PinCode = userProfileDTO.PinCode;
+      }
+      else
+      {
+        userProfile.PinCode = null;
+      }
+
       userProfile.CreatedBy = Convert.ToInt64(userProfileDTO.Id);
       userProfile.Email = userProfileDTO.Email;
       userProfile.CountryId = Convert.ToInt32(userProfileDTO.CountryId);
-      userProfile.CityId = Convert.ToInt64(userProfileDTO.CityId);
       userProfile.CreationDateTime = DateTime.UtcNow;
       userProfile.ModifiedBy = Convert.ToInt64(userProfileDTO.Id);
       userProfile.IsActive = true;
       userProfile.IsExternalLogin = false;
-      userProfile.ImagePath = userProfileDTO.ImagePath;
-      userProfile.PinCode = userProfileDTO.PinCode;
 
+      if(userProfileDTO.ImagePath != "null" && userProfileDTO.ImagePath != null)
+      {
+        userProfile.ImagePath = userProfileDTO.ImagePath;
+
+      }
+      
+      if (userProfileDTO.ImageName != "null" && userProfileDTO.ImageName != null)
+      {
+        userProfile.ImageName = userProfileDTO.ImageName;
+      }
 
       if (!isAdd)
       {
@@ -125,6 +168,7 @@ namespace Walruslogics.Advertisement.BusinessLogic
         userProfileDTO.Address2 = userProfile.Address2;
         userProfileDTO.CityId = userProfile.CityId.ToString();
         userProfileDTO.CountryId = userProfile.CountryId.ToString();
+        userProfileDTO.ImageName = userProfile.ImageName;
         userProfileDTO.PinCode = userProfile.PinCode ;
 
         _responseObject = WalruslogicsResponseBuilder.GenerateResponse(ResultCode.Success.ToString(), "", userProfileDTO);

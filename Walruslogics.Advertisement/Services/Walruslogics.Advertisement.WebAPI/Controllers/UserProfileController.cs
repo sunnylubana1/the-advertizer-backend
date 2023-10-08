@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,6 +14,7 @@ namespace Walruslogics.Advertisement.WebAPI.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [Authorize]
   public class UserProfileController : ControllerBase
   {
     private IUserProfileBusinessLogic _userProfileBusinessLogic;
@@ -63,6 +65,7 @@ namespace Walruslogics.Advertisement.WebAPI.Controllers
 
 
           string filename = Guid.NewGuid().ToString();
+
           var uploadPath = Path.Combine(wwwrootpath, string.Format(@"Images\User\{0}\", userProfileDTO.Id));
 
           if (!Directory.Exists(uploadPath))
@@ -72,7 +75,9 @@ namespace Walruslogics.Advertisement.WebAPI.Controllers
 
           var extension = Path.GetExtension(file.FileName);
 
-          var strFilePath = Path.Combine(uploadPath, userProfileDTO.Id + extension);
+          string imageDbFileName = userProfileDTO.Id + '-' + filename;
+
+          var strFilePath = Path.Combine(uploadPath, imageDbFileName + extension);
 
 
           using (FileStream fs = new FileStream(strFilePath, FileMode.Create, FileAccess.ReadWrite))
@@ -83,6 +88,7 @@ namespace Walruslogics.Advertisement.WebAPI.Controllers
           var dbPath = Path.Combine(string.Format(@"{0}://{1}/Images/User/{2}/", Request.Scheme, Request.Host, userProfileDTO.Id));
 
           userProfileDTO.ImagePath = dbPath;
+          userProfileDTO.ImageName = imageDbFileName;
 
           ImageUtility.ScaleResizeAndSaveImages(uploadPath, strFilePath);
 

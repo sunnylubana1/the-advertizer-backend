@@ -18,9 +18,10 @@ namespace Walruslogics.Advertisement.DTOs
     public string Email { get; set; }
     public string? Address { get; set; }
     public string? Address2 { get; set; }
-    public string CountryId { get; set; }
-    public string CityId { get; set; }
+    public string? CountryId { get; set; }
+    public string? CityId { get; set; }
     public string? ImagePath { get; set; }
+    public string? ImageName { get; set; }
     public string? PinCode { get; set; }
     public IFormFile Image { get; set; }
   }
